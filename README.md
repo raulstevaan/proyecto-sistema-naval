@@ -1,4 +1,4 @@
-# 🚢 Sistema de Gestión Naval (SGN) - Versión SQLite
+# 🚢 Sistema de Gestión Naval (SGN) -Versión SQLite
 
 **Autor:** Raúl Estevan Domínguez  
 **Asignatura:** Fundamentos de Programación (08 GIIN)  
