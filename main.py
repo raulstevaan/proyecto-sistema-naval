@@ -1,7 +1,7 @@
 # ==========================================
 # Asignatura: 08GIIN - Fundamentos de Programación
 # Alumno: Estevan Dominguez Raúl
-# Programa Principal
+# Programa Principal (Versión SQLite)
 # Archivo: main.py
 # ==========================================
 
@@ -10,7 +10,7 @@ import ficheros
 
 def mostrar_menu():
     print("\n*************************************")
-    print("*   SISTEMA DE GESTIÓN NAVAL        *")
+    print("* SISTEMA DE GESTIÓN NAVAL        *")
     print("*************************************")
     print("* 1) Registrar viaje                *")
     print("* 2) Evaluación de riesgo           *")
@@ -18,12 +18,15 @@ def mostrar_menu():
     print("* 4) Finalizar viaje                *")
     print("* 5) Registro de incidentes         *")
     print("* 6) Información del sistema        *")
-    print("* 7) Gestión de Ficheros            *")
+    print("* 7) Gestión de Ficheros (BD)       *")
     print("* 8) Cambio año                     *")
     print("* 9) Salir                          *")
     print("*************************************")
 
 def main():
+    # Inicialización de la base de datos profesional
+    ficheros.inicializar_base_datos()
+
     # Inicialización de las estructuras de datos principales en memoria
     viajes_activos = {}      
     interceptados = []       
@@ -64,11 +67,9 @@ def main():
                 operaciones.cambio_ano(viajes_activos, historicos, interceptados)
             elif opcion == 9:
                 print("\n[INFO] Iniciando proceso de salida...")
-                guardar = input("¿Deseas guardar los datos actuales antes de salir? (s/n): ").strip().lower()
+                guardar = input("¿Deseas guardar los datos actuales en la base de datos antes de salir? (s/n): ").strip().lower()
                 if guardar == 's':
-                    nombre_fichero = input("Introduce el nombre del fichero para guardar (ej. final.txt): ").strip()
-                    if nombre_fichero != "":
-                        ficheros.guardar_estado(nombre_fichero, viajes_activos, historicos, interceptados)
+                    ficheros.guardar_estado("sistema_naval.db", viajes_activos, historicos, interceptados)
                 
                 print("Cerrando el Sistema de Gestión Naval. ¡Hasta pronto!")
                 break
@@ -79,6 +80,5 @@ def main():
         except ValueError:
             print("\n[ERROR] Entrada no válida. Debes introducir un número entero.")
 
-# Punto de entrada del programa
 if __name__ == "__main__":
     main()
