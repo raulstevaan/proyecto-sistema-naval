@@ -1,0 +1,8 @@
+edad_min = 30
+edad_peso = 10
+barriles_min = 1000
+barriles_peso = 4
+banderas_conflictivas = Irán;Cuba;Panamá;Liberia;Islas Marshall
+bandera_peso = 15
+puertos_conflictivos = Bandar;Abbas;Chabahar;Kerch
+puertos_peso = 20
