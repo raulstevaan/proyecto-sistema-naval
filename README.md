@@ -1,5 +1,5 @@
-**Autor:** Raúl Estevan Domínguez [cite: 5]
-**Asignatura:** Fundamentos de Programación (08 GIIN) [cite: 3]
+**Autor:** Raúl Estevan 
+**Asignatura:** Fundamentos de Programación (08 GIIN) 
 
 ## 📝 Descripción del Proyecto
 Este proyecto simula la gestión completa de los viajes de barcos petroleros.El programa sigue un flujo claro: registro de datos básicos, cálculo de riesgo, autorización o bloqueo, y gestión de incidentes (fugas o interceptaciones).
@@ -8,8 +8,8 @@ Este proyecto simula la gestión completa de los viajes de barcos petroleros.El 
 El proyecto se divide en tres módulos para evitar importaciones circulares:
 
 * **`main.py`**: Motor principal. [cite_start]Muestra el menú y gestiona las opciones del usuario.
-* **`operaciones.py`**: Lógica de negocio. [cite_start]Incluye altas, bajas, cálculo de riesgos y gestión de incidentes.
-* **`ficheros.py`**: Persistencia de datos. [cite_start]Lee la configuración y guarda/carga el estado del sistema.
+* **`operaciones.py`**: Lógica de negocio. Incluye altas, bajas, cálculo de riesgos y gestión de incidentes.
+* **`ficheros.py`**: Persistencia de datos. Lee la configuración y guarda/carga el estado del sistema.
 
 ## ⚙️ Configuración del Sistema
 El programa utiliza un archivo `conf.txt` para definir las reglas de riesgo sin modificar el código:
