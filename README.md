@@ -25,7 +25,7 @@ El software incluye barreras de seguridad para ser "a prueba de fallos":
 * **Control de Estados**: Reseteo automático de riesgo si se modifican datos críticos del barco.
 
 ## 📋 Estructuras de Datos
-[cite_start]La información se gestiona en RAM mediante tres estructura:
+La información se gestiona en RAM mediante tres estructura:
 1. **Diccionario `viajes_activos`**: Almacena barcos navegando usando el IMO como clave.
 2. **Lista `historicos`**: Barcos que han finalizado su viaje correctamente.
 3. **Lista `interceptados`**: Barcos bloqueados capturados por autoridades.
